@@ -101,7 +101,7 @@ a:focus {
 }
 
 /*header section*/
-.hero_area {
+/* .hero_area {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +110,19 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url(../images/slide-01.mp4);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+} */
+
+.hero_area {
+  /* Positionnement et affichage */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* Arrière-plan */
   background-image: url(../images/slide-01.mp4);
   background-size: cover;
   background-position: center bottom;
@@ -285,11 +298,14 @@ a:focus {
 }
 
 .slider_section .detail-box h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   font-weight: bold;
   margin-bottom: 15px;
-  font-family: "bodoni svtytwo sc itc tt book", sans-serif;
-  font-weight: 400;
+   /* font-family: 'Fredoka One', 'Baloo 2', sans-serif; */
+  /* font-family: "bodoni svtytwo sc itc tt book", sans-serif; */
+  /* font-family: 'Bangers', sans-serif; */
+    font-family: 'Alfa Slab One', serif;
+  font-weight: 3500;
 }
 
 .slider_section .detail-box h1 span {
