@@ -250,7 +250,24 @@
           10% de réduction en ligne
         </a>
       </div>
+      <div id="game-popup-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:99999; justify-content:center; align-items:center; backdrop-filter: blur(8px); padding: 20px;">
+    
+    <div style="position:relative; width:100%; max-width:400px; height:650px; background:transparent;">
+        
+        <button onclick="document.getElementById('game-popup-overlay').style.display='none'; document.getElementById('game-iframe').src='';" 
+                style="position:absolute; top:-15px; right:-5px; z-index:100001; background:#ffcc00; color:#1a1a1a; border:none; border-radius:50%; width:35px; height:35px; cursor:pointer; font-size:20px; font-weight:bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); display:flex; justify-content:center; align-items:center;">
+          ✕
+        </button>
+
+        <iframe 
+            id="game-iframe"
+            src="https://restaurantgame.netlify.app/?name=Istanbul%20Saint%20cere&logo=https://www.istanbulstcere.fr/images/logo.png&google=https://g.page/r/CUx5qay6rFk2EAE/review&insta=https://www.instagram.com/istanbulstcere/&fb=https://www.facebook.com/profile.php?id=100063630606670" 
+            style="width:100%; height:100%; border:none; border-radius:25px; background: transparent;" 
+            allowtransparency="true"
+            allow="clipboard-write">
+        </iframe>
     </div>
+</div>
   </section>
 
   <!-- end recipe section -->
@@ -575,6 +592,20 @@ aria-labelledby="demoModal" aria-hidden="true">
 <!-- Lunar JS -->
 <script src="js/lunar.js"></script>
 
+
+
+<script>
+    function openGamePopup() {
+        var popup = document.getElementById('game-popup-overlay');
+        if(popup) {
+            popup.style.display = 'flex';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(openGamePopup, 3000);
+    });
+</script>
 
 </body>
 
